@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From Label Error Detection to Correction – Project Page</title>
+  <title>TemCap – Project Page</title>
   <link rel="icon" type="image/png" href="./assets/images/Browser_Icon.png" />
   <!-- Tailwind (via CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,8 +19,9 @@
       <nav class="space-y-1">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
+        <a href="#contributions"    class="block hover:underline text-gray-700">Contributions</a>
         <a href="#metrics"    class="block hover:underline text-gray-700">Metrics</a>
-        <a href="#overlooked"    class="block hover:underline text-gray-700">Overlooked objects</a>
+        <a href="#impact"    class="block hover:underline text-gray-700">Impact</a>
         <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
@@ -31,9 +32,8 @@
       <div>
         <h3 class="font-semibold mb-1">Paper Links</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li><a href="https://arxiv.org/pdf/2508.06556" class="text-blue-600 hover:underline">PDF (41.1 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.06556" class="text-blue-600 hover:underline">arXiv page</a></li>
-          <li><a href="https://github.com/JonathanKlees/rechecked" class="text-blue-600 hover:underline">GitHub Code</a></li>
+          <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
+          <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv page</a></li>
         </ul>
       </div>
     </div>
@@ -48,8 +48,9 @@
       <nav class="space-y-2 mb-6 text-sm leading-relaxed">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
+        <a href="#contributions"    class="block hover:underline text-gray-700">Contributions</a>
         <a href="#metrics"    class="block hover:underline text-gray-700">Metrics</a>
-        <a href="#overlooked"    class="block hover:underline text-gray-700">Overlooked objects</a>
+        <a href="#impact"    class="block hover:underline text-gray-700">Impact</a>
         <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
@@ -59,9 +60,8 @@
       <hr class="my-6">
       <h3 class="font-semibold mb-2 text-sm">Paper Links</h3>
       <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed mb-6">
-        <li><a href="https://arxiv.org/pdf/2508.06556" class="text-blue-600 hover:underline">PDF (41.1 MB)</a></li>
-        <li><a href="https://arxiv.org/abs/2508.06556" class="text-blue-600 hover:underline">arXiv page</a></li>
-        <li><a href="https://github.com/JonathanKlees/rechecked" class="text-blue-600 hover:underline">GitHub Code</a></li>
+        <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
+        <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv page</a></li>
       </ul>
       <hr class="my-6">
     </aside>
@@ -72,41 +72,34 @@
       <!-- HERO -->
       <header class="text-center mb-12">
         <h1 class="text-4xl font-extrabold leading-tight">
-          From Label Error Detection to Correction: A Modular<br>
-          Framework and Benchmark for Object Detection Datasets
+          Temporal Object Captioning for Street Scene Videos from LiDAR Tracks
         </h1>
 
         <!-- AUTHORS -->
         <p class="text-sm text-gray-500 mt-3">
           <a href="https://osvia.github.io/team.html"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Sarina Penquitt</a><sup>1,4</sup> •
+            rel="noopener noreferrer">Vignesh Gopinathan</a><sup>1,2</sup> •
+          <a href="mailto:urs.zimmermann[at]aptiv.com"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Urs Zimmermann</a><sup>2</sup> •
+          <a href="mailto:michael.arnold[at]aptiv.com"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Michael Arnold</a><sup>2</sup> •
           <a href="https://osvia.github.io/team.html"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Jonathan Klees</a><sup>1,4</sup> •
-          <a href="mailto:rinor.cakaj@quality-match.com"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Rinor Cakaj</a><sup>3</sup> •
-          <a href="mailto:dk@quality-match.com"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Daniel Kondermann</a><sup>3</sup> •
-          <a href="https://osvia.github.io/team.html"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Matthias Rottmann</a><sup>2</sup> •
-          <a href="mailto:lars.schmarje@quality-match.com"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Lars Schmarje</a><sup>3</sup>
+            rel="noopener noreferrer">Matthias Rottmann</a><sup>3</sup>
         </p>
 
         <!-- AFFILIATION FOOTNOTE -->
         <p class="text-xs text-gray-500 mt-1">
           <sup>1</sup> Department&nbsp;of&nbsp;Mathematics, University&nbsp;of&nbsp;Wuppertal, Wuppertal, Germany
           <br>
-          <sup>2</sup> Institute of Computer Science, Osnabrück University, Osnabrück, Germany
+          <sup>2</sup> Aptiv, Germany
           <br>
-          <sup>3</sup> Quality Match, Heidelberg, Germany
-          <br>
-          <sup>4</sup> Equal contribution
+          <sup>3</sup> Institute of Computer Science, Osnabrück University, Osnabrück, Germany
+          <br><br>
+          Winter Conference on Applications of Computer Vision (WACV), 2026
         </p>
 
         <!-- LOGO STRIP -->
@@ -126,9 +119,9 @@
             <img src="./assets/images/logo_osnabrück.jpg" alt="University of Osnabrück" class="h-full w-auto" loading="lazy">
           </a>
 
-          <!-- Quality Match -->
-          <a href="https://www.quality-match.com/" target="_blank" rel="noopener noreferrer" class="block h-10">
-            <img src="./assets/images/quality_match_logo.png" alt="Quality Match" class="h-full w-auto" loading="lazy">
+          <!-- Aptiv -->
+          <a href="https://www.aptiv.com/" target="_blank" rel="noopener noreferrer" class="block h-10">
+            <img src="./assets/images/aptiv_logo_color_rgb.png" alt="Aptiv" class="h-full w-auto" loading="lazy">
           </a>
 
           <!-- Add additional logos here (duplicate & adapt) -->
@@ -139,7 +132,7 @@
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
           <!-- Paper / Document icon -->
-          <a href="https://arxiv.org/abs/2508.06556"
+          <a href="https://arxiv.org/abs/2505.16594"
             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
             <!-- Heroicons outline: DocumentText -->
             <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -152,25 +145,6 @@
                     d="M8.25 9.75h7.5m-7.5 3h7.5m-7.5 3h4.5" />
             </svg>
             arXiv Page
-          </a>
-
-          <!-- GitHub -->
-          <a href="https://github.com/JonathanKlees/rechecked"
-            class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
-            <!-- GitHub Octicon: mark-github -->
-            <svg class="w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd"
-                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
-                      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
-                      -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
-                      .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
-                      -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
-                      .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
-                      .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
-                      0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
-              </path>
-            </svg>
-            GitHub Code
           </a>
         </div>
 
@@ -188,13 +162,13 @@
       <section id="abstract" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
         <h2 class="text-2xl font-semibold">Abstract</h2>
         <p>
-          We introduce a semi-automated framework for label-error correction called REC✓D (Rechecked). Building on existing detectors, the framework pairs their error proposals with lightweight, 
-              crowdsourced microtasks. These tasks enable multiple annotators to independently verify each candidate bounding box, and their responses are aggregated to estimate ambiguity and improve 
-              label quality. To demonstrate the effectiveness of REC✓D, we apply it to the class pedestrian in the KITTI dataset. Our crowdsourced review yields high-quality corrected annotations, which 
-              indicate a rate of at least 24% of missing and inaccurate annotations in original annotations. This validated set will be released as a new real-world benchmark for label error detection 
-              and correction. We show that current label error detection methods, when combined with our correction framework, can recover hundreds of errors in the time it would take a human to annotate 
-              bounding boxes from scratch. However, even the best methods still miss up to 66% of the true errors and with low quality labels introduce more errors than they find. This highlights the urgent 
-              need for further research, now enabled by our released benchmark.
+          We introduce a fully automated LiDAR‑based captioning pipeline that produces object‑level,
+      temporally grounded descriptions of street‑scene videos. The captions encode lane position,
+      motion relative to the ego vehicle, and temporal transitions (e.g., lane changes), enabling
+      small, efficient video captioners (SwinBERT) trained on front‑camera frames alone to learn
+      richer temporal semantics. Across three datasets (proprietary, Waymo, NuScenes), models
+      trained with our captions show stronger temporal understanding and markedly reduced reliance
+      on static visual backgrounds, as quantified by our Visual Bias Measure (VBM).
         </p>
       </section>
 
@@ -202,26 +176,26 @@
       <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Method Overview</h2>
         <p>
-          We propose a semi-automatic framework that combines label error detection methods with a microtask based review process to efficiently correct label errors. It consists of three main stages: object detection, label error proposal, and microtask based correction.
+          Cross‑modality supervision: generate captions from LiDAR, train only on RGB front camera video recording.
         </p>
         <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-          <!-- Column 1: Overview of our workflow -->
+          <!-- Column 1: nd‑to‑end data → caption → training pipeline -->
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Overview of our workflow</h3>
+            <h3 class="text-xl font-semibold mb-3 text-center">End‑to‑end data → caption → training pipeline</h3>
             <figure class="rounded-lg overflow-hidden shadow-sm">
-              <img src="./assets/images/figure2.png" 
-                  alt="image" 
+              <img src="./assets/images/method_image0.png" 
+                  alt="method_image0" 
                   loading="lazy" 
                   class="w-full h-auto object-cover">
             </figure>
           </div>
 
-          <!-- Column 2: Microtasks interface -->
+          <!-- Column 2: LiDAR‑to‑mask projection (convex hull) -->
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Microtasks interface</h3>
+            <h3 class="text-xl font-semibold mb-3 text-center">LiDAR‑to‑mask projection (convex hull)</h3>
             <figure class="rounded-lg overflow-hidden shadow-sm">
-              <img src="./assets/images/figure3.png" 
-                  alt="image" 
+              <img src="./assets/images/method_image1.png" 
+                  alt="method_image1" 
                   loading="lazy" 
                   class="w-full h-auto object-cover">
             </figure>
@@ -229,118 +203,168 @@
         </div>
         <!-- Additional text -->
           <p>
-            <h3 class="text-xl font-semibold mb-3">Object Detection Models</h3>
-            A trained object detector is used to obtain predictions on the respective dataset. We use YOLOX and Cascade R-CNN and these detectors are trained sequentially, with the output of one detector 
-             serving as the training set for the subsequent one.
-            <h3 class="text-xl font-semibold mb-3">Label Error Detection Methods</h3>
-            Generating automatically proposals for label errors by integrating existing label error detection methods, including MetaDetect, loss-based instance-wise scoring
-            and ObjectLab. Each method predicts a score that reflects the likelihood of a predicted box indicating a label error for every detected bounding box.
-            <h3 class="text-xl font-semibold mb-3">Error Correction</h3>
-            The label error proposals are evaluated manually. We created short and easy-to-answer questions referred to as microtasks. With microtasks, annotators can quickly answer one simple question at a time We repeat the task with several people at the same time resulting in an estimate of the underlying distribution of the outcomes associated to this question. The microtask we used to construct the validated annotations of the KITTI dataset.
+            <h3 class="text-l font-semibold mb-3">Step 1: Host segmentation.</h3>
+            Split videos into action‑consistent segments using ego speed and yaw‑rate (motion & direction tags).
+            <h3 class="text-l font-semibold mb-3">Step 2: Neighbor tracking.</h3>
+            Detect & track moving agents in LiDAR; restrict to a forward neighborhood visible in the front camera.
+            <h3 class="text-l font-semibold mb-3">Step 3: Tagging.</h3>
+            Assign per‑timestamp lane (left/right/host/oncoming/left‑lateral/right‑lateral) and motion (approach/away/constant/stationary) from relative pose & distance changes.
+            <h3 class="text-l font-semibold mb-3">Step 4: Template captions.</h3>
+            Compress tag time‑series into unified tag sequences and render multi‑sentence captions describing initial state and subsequent transitions.
+            <h3 class="text-l font-semibold mb-3">Step 5 (optional): Object masks.</h3>
+            Project object LiDAR points to the image, build a tight convex‑hull mask, and overlay to focus learning on the captioned agent.
+            <h3 class="text-l font-semibold mb-3">Train: SwinBERT on RGB only.</h3>
+            Use the captions for masked‑language training on uniformly sampled frames from front‑camera clips.
+            
           </p>
       </section>
 
+      <!-- Key Contributions and Results -->
+      <section id="contributions" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+        <h2 class="text-2xl font-semibold">Key Contributions and Results</h2>
+        <p>
+          <b>• Scalable, generic captioning from LiDAR</b> for temporally rich, object‑level descriptions without human labels.
+          <br>
+          <b>• Temporal understanding beats strong baselines</b> on captioning and retrieval across seen and unseen datasets.
+          <br>
+          <b>• Visual Bias Measure (VBM):</b> a simple BLEU‑based metric that quantifies reliance on static visual similarity 
+          <br>⠀|-> training with our captions <b>consistently lowers VBM</b>. 
+          <br>
+          <b>• Mask‑augmented training</b> further improves generalization by directing attention to the correct object of interest.
+
+        </p>
+      </section>
+      
       <!-- METRICS -->
       
       <section id="metrics" class="space-y-6 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
           <h2 class="text-2xl font-semibold">Metrics at a Glance</h2>
-          <!-- ──  Number of identified label errors ───────────────────────────────────── -->
+          <!-- ──  Captioning Quality ───────────────────────────────────── -->
           <div
           class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
           <!-- Explanatory text -->
           <div class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
               <h3 class="font-semibold text-lg">
-              Number of identified label errors for the class pedestrian in the KITTI dataset
+                Captioning Quality (BLEU4 / CIDEr / SPICE)
               </h3>
               <p class="text-sm leading-relaxed">
-              The number of identified label errors depend on the probability threshold for soft label annotations and the minimal height of considered objects. Through comparison of original and validated annotations, we identify a number of label errors in the original dataset even when considering only evident errors.
+                Trained on a proprietary dataset with single‑sentence captions, the model generalizes to Waymo and NuScenes,
+                outperforming InternVideo, ViCLIP, and CLIP—even when those baselines only choose from candidate captions.
               </p>
           </div>
       
           <!-- Chart -->
           <div class="flex-1 overflow-x-auto">
-              <img src="./assets/images/table3.png" alt="Segmentation metrics summary" class="chart-image w-full border rounded-md" />
+              <img src="./assets/images/table1.png" alt="table1" class="chart-image w-full border rounded-md" />
           </div>
           </div>
       
-        <!-- ── Validated GT probability ─────────────────────────────────── -->
+        <!-- ── Visual Bias Measure (VBM) ─────────────────────────────────── -->
           <div
               class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
               <!-- Explanatory text -->
               <div
                   class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
                   <h3 class="font-semibold text-lg">
-                      Validated GT probability vs. Human Perception
+                    Visual Bias Measure (VBM)
                   </h3>
                   <p class="text-sm leading-relaxed">
-                      Comparison of provided validated GT probability of being a pedestrian (y-axis). Each dot represents an annotation by three expert annotators and its corresponding probability in the validated GT. The diamond represents the center of the mean, the dashed lines the standard deviation and the star the median per annotator answer.
+                    BM measures the % drop in retrieval BLEU4 when same‑time of recording/same neighbors are excluded.
+                    Lower is better (less reliance on static appearance). Our training yields the <b>lowest VBM</b> across
+                    datasets, with mask augmentation reducing VBM by ~<b>5 pp</b> on Waymo and <b>2 pp</b> on NuScenes.
                   </p>
               </div>
 
               <!-- Chart -->
               <div class="flex-1 overflow-x-auto">
-                  <img src="./assets/images/figure4.png" alt="figure 4" class="chart-image w-full border rounded-md"/>
+                  <img src="./assets/images/table2.png" alt="table2" class="chart-image w-full border rounded-md"/>
               </div>
           </div>
+
+        <!-- ── Zero‑Shot Generalization to Longer Captions ─────────────────────────────────── -->
+        <div
+        class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
+        <!-- Explanatory text -->
+        <div
+            class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
+            <h3 class="font-semibold text-lg">
+              Zero‑Shot Generalization to Longer Captions
+            </h3>
+            <p class="text-sm leading-relaxed">
+              Despite training only on single‑sentence captions, our embeddings retrieve videos for <b>two‑sentence</b>
+          captions (more complex maneuvers) with a ~<b>20% higher</b> mean BLEU4 than the best baseline (violin‑plot analysis).
+            </p>
+        </div>
+
+        <!-- Chart -->
+        <div class="flex-1 overflow-x-auto">
+            <img src="./assets/images/table3.png" alt="table3" class="chart-image w-full border rounded-md"/>
+        </div>
+    </div>
 
       </section>
   
   
 
-      <!-- Most evident overlooked objects -->
-      <section id="overlooked" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
-        <h2 class="text-2xl font-semibold text-center md:text-left">Most evident overlooked objects in KITTI GT</h2>
-        <p class="text-sm mb-4 text-center md:text-left">
-          Overlooked objects (in red color) that are not contained in original annotations (green color). These examples have a soft label probability of 0.8 or higher as well as a bounding box height of 40 pixels or more.
-        </p>
+      <!-- Additional images -->
+      <section id="images" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
 
         <!-- ── IMAGE GRID ───────────────────────────────────────── -->
         <div class="grid grid-cols-2 gap-3 md:gap-4 place-items-center">
 
           <!-- ── ROW 1 — Segmentation GTs ── -->
           <figure class="text-center w-full">
-            <img src="./assets/images/label_error_0.png" id="gt-orig"
-              alt="label-error0"
+            <img src="./assets/images/additional_image_0.png" id="gt-orig"
+              alt="additional_image_0"
               class="rounded-lg shadow-sm max-h-72 w-full object-contain">
           </figure>
 
           <figure class="text-center w-full">
-            <img src="./assets/images/label_error_1.png" id="gt-eed"
-              alt="label-error1"
+            <img src="./assets/images/additional_image_1.png" id="gt-eed"
+              alt="additional_image_1"
               class="rounded-lg shadow-sm max-h-72 w-full object-contain">
           </figure>
 
           <!-- ── ROW 2 — Input Images ── -->
           <figure class="text-center w-full">
-            <img src="./assets/images/label_error_2.png" id="img-orig"
-              alt="label-error2"
+            <img src="./assets/images/additional_image_2.png" id="img-orig"
+              alt="additional_image_2"
               class="rounded-lg shadow-sm max-h-72 w-full object-contain">
           </figure>
 
           <figure class="text-center w-full">
-            <img src="./assets/images/label_error_3.png" id="img-eed"
-              alt="label-error3"
+            <img src="./assets/images/additional_image_3.png" id="img-eed"
+              alt="additional_image_3"
               class="rounded-lg shadow-sm max-h-72 w-full object-contain">
           </figure>
         </div>
+      </section>
+
+      <!-- Broader Impact & Potential -->
+      <section id="impact" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
+        <h2 class="text-2xl font-semibold">Broader Impact & Potential</h2>
+        <p>
+          • <b>Scaling data generation:</b> The trained video captioning model can be used to generate temporal object captions for camera-only dataset. Additionally, any LiDAR‑equipped dataset can be converted into rich temporal captioning dataset at low cost using out pseudo-labeling method.  
+          <br>
+          • <b>Beyond captioning:</b> The learned embeddings improve <b>video retrieval</b> by maneuvers and can aid <b>trajectory forecasting, risk reasoning, or behavior search</b> tools. 
+          <br>
+          • <b>Temporal understanding metric:</b> VBM, a metric to quantitaively evaluate temporal understanding capabilities of models. Lower VBM suggests robustness to background changes—useful for being agnostic to geographic and seasonal shifts.
+        </p>
       </section>
 
       <!-- RESOURCES -->
       <section id="resources" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Resources & Links</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><a href="https://arxiv.org/pdf/2508.06556" class="text-blue-600 hover:underline">PDF (41.1 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.06556" class="text-blue-600 hover:underline">arXiv abstract &amp; BibTeX</a></li>
-          <li><a href="https://github.com/JonathanKlees/rechecked" class="text-blue-600 hover:underline">Official implementation</a></li>
+          <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
+          <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv abstract &amp; BibTeX</a></li>
+          <li><a href="#" class="text-blue-600 hover:underline">Code (coming soon)</a></li>
         </ul>
       </section>
 
       <!-- ACKNOWLEDGMENTS -->
       <section id="acks" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Acknowledgments</h2>
-        <p>S.P. and M.R. acknowledge support by the German Federal Ministry of Education and Research (BMBF) within the junior research group project “UnrEAL” (grant no. 01IS22069).</p>
-        <p>J.K. and M.R. acknowledge support by the German Federal Ministry of Education and Research (BMBF) within the project “RELiABEL” (grant no. 01IS24019B).</p>
-        <p>R.C., D.K. and L.S. also acknowledge support within the project “RELiABEL” (grant no. 01IS24019A).</p>
         <div class="mt-4 w-40 flex flex-col items-center">
           <a href="https://osvia.github.io/" target="_blank" rel="noopener noreferrer">
             <img src="./assets/images/KeyVisual_Dark.png" alt="OSVIA Lab Logo" loading="lazy" class="w-full h-auto">
@@ -362,12 +386,12 @@
                       bg-gray-100 rounded-lg p-3
                       text-[0.70rem] leading-5 font-mono
                       text-gray-700 select-all">
-@article{penquitt2025labelerrordetectioncorrection,
-                title={From Label Error Detection to Correction: A Modular Framework and Benchmark for Object Detection Datasets}, 
-                author={Penquitt, S. and Klees, J. and Cakaj, R. and Kondermann, D. and Rottmann, M. and Schmarje, L.},
-                journal={arXiv:2508.06556},
-                year={2025} 
-              }
+                      @inproceedings{temporal-object-captioning-wacv2026,
+                        title={Temporal Object Captioning for Street Scene Videos from LiDAR Tracks},
+                        author={To be updated post-review},
+                        booktitle={WACV},
+                        year={2026},
+                        note={Under review; project page}}
           </pre>
 
           <!-- copy‑to‑clipboard button -->
@@ -400,8 +424,7 @@
         <h2 class="text-2xl font-semibold">Contact</h2>
         <p class="text-sm">Have questions or want to collaborate? Reach out:</p>
         <ul class="space-y-1 text-sm">
-          <li>Email: <a href="mailto:penquitt@uni-wuppertal.de" class="text-blue-600 hover:underline">penquitt@uni-wuppertal.de</a></li>
-          <li>GitHub Issues: <a href="https://github.com/JonathanKlees/rechecked" class="text-blue-600 hover:underline">open a ticket ↗</a></li>
+          <li>Email: <a href="mailto:gopinathan[at]uni-wuppertal.de" class="text-blue-600 hover:underline">gopinathan[at]uni-wuppertal.de</a></li>
         </ul>
       </section>
 
