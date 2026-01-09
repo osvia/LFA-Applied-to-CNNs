@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PRIMU – Project Page</title>
+  <title>LFA Applied to CNNs – Project Page</title>
   <link rel="icon" type="image/png" href="./assets/images/Browser_Icon.png" />
   <!-- Tailwind (via CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -68,23 +68,17 @@
       <!-- HERO -->
       <header class="text-center mb-12">
         <h1 class="text-4xl font-extrabold leading-tight">
-          Uncertainty Estimation for Novel Views in Gaussian Splatting from Primitive-Based Representations of Error and Coverage
+          LFA Applied to CNNs: Efficient Singular Value Decomposition of Convolutional Mappings by Local Fourier Analysis
         </h1>
 
         <!-- AUTHORS -->
         <p class="text-sm text-gray-500 mt-3">
-          <a href="mailto:gottwald[at]uni-wuppertal.de"
+          <a href="mailto:vanbetteray[at]uni-wuppertal.de"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Thomas Gottwald</a><sup>1</sup> •
-          <a href="mailto:edgar.heinert[at]uni-osnabrueck.de"
+            rel="noopener noreferrer">Antonia van Betteray</a><sup>2</sup> •
+          <a href="mailto:kkahl[at]uni-wuppertal.de"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Edgar Heinert</a><sup>2</sup> •
-          <a href="mailto:stehr[at]uni-wuppertal.de"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Peter Stehr</a><sup>1</sup> •
-          <a href="mailto:chamuditha.galappaththige[at]qut.edu.au"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Chamuditha Jayanga Galappaththige</a><sup>3</sup> •
+            rel="noopener noreferrer">Karsten Kahl</a><sup>1</sup> •
           <a href="https://osvia.github.io/team.html"
             class="text-blue-600 hover:underline" target="_blank"
             rel="noopener noreferrer">Matthias Rottmann</a><sup>2</sup>
@@ -95,8 +89,10 @@
           <sup>1</sup> Department&nbsp;of&nbsp;Mathematics, University&nbsp;of&nbsp;Wuppertal, Wuppertal, Germany
           <br>
           <sup>2</sup> Institute of Computer Science, University of Osnabrück, Osnabrück, Germany
+          <br><br>
+          Frontiers in Artificial Intelligence and Applications, Volume 413
           <br>
-          <sup>3</sup> Centre for Robotics, Queensland University of Technology, Brisbane, Australia
+          ECAI 2025 doi: "10.3233/FAIA250793"
         </p>
 
         <!-- LOGO STRIP -->
@@ -116,11 +112,6 @@
             <img src="./assets/images/logo_osnabrück.jpg" alt="University of Osnabrück" class="h-full w-auto" loading="lazy">
           </a>
 
-          <!-- Aptiv -->
-          <a href="https://www.qut.edu.au/" target="_blank" rel="noopener noreferrer" class="block h-10">
-            <img src="./assets/images/QUT-logo.png" alt="Aptiv" class="h-full w-auto" loading="lazy">
-          </a>
-
           <!-- Add additional logos here (duplicate & adapt) -->
         </div>
 
@@ -129,7 +120,7 @@
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
           <!-- Paper / Document icon -->
-          <a href="https://arxiv.org/abs/2508.02443"
+          <a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793"
             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
             <!-- Heroicons outline: DocumentText -->
             <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -141,18 +132,33 @@
               <path stroke-linecap="round" stroke-linejoin="round"
                     d="M8.25 9.75h7.5m-7.5 3h7.5m-7.5 3h4.5" />
             </svg>
-            arXiv Page
+            Paper
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/vanbetteray/conv_svd_by_lfa"
+            class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
+            <!-- GitHub Octicon: mark-github -->
+            <svg class="w-5 h-5 mr-2" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                      -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                      .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                      -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27
+                      .68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12
+                      .51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48
+                      0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+              </path>
+            </svg>
+            GitHub Code
           </a>
         </div>
 
 
         <!-- Title Images Row (unchanged) -->
         <div class="flex flex-wrap justify-center gap-2 mt-6">
-          <img src="./assets/images/africa_3_all_depth_pred_error.png"  alt="Title image 1"
-              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
-          <img src="./assets/images/africa_3_all_rgb_pred_error.png"  alt="Title image 2"
-              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
-          <img src="./assets/images/africa_3_all_rgb_render.png"  alt="Title image 3"
+          <img src="./assets/images/#"  alt="Title image 1"
               class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
         </div>
       </header>
@@ -163,36 +169,97 @@
       <section id="abstract" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
         <h2 class="text-2xl font-semibold">Abstract</h2>
         <p>
-          We introduce PRIMU (Primitive-based Representations of Uncertainty), a post-hoc uncertainty estimation framework for Gaussian Splatting.
-          PRIMU constructs primitive-level representations of training-view coverage, training error and field-of-view occurrences.
-          Based on these representations, we render uncertainty feature maps, on which a pixel-wise regression is performed to obtain final, pixel-level uncertainty estimates.
-          <br>
-          • We demonstrate the effectiveness of our approach for estimating uncertainty in rendering and depth error.
-          <br>
-          • Additionally, we study uncertainty estimation on foreground objects and backgrounds, as well as the use of different feature map combinations and the generalization capabilities of the regression models to unseen scenes.
-          <br>
-          • We use the proposed uncertainty feature maps to directly guide active view selection, prioritizing viewpoints with high uncertainty indicators.
+          The singular values of convolutional mappings encode interesting spectral properties, which can be used, e.g., to improve generalization and robustness of convolutional neural networks as well as to facilitate model compression. However, the computation of singular values is typically very resource-intensive. The naive approach involves unrolling the convolutional mapping along the input and channel dimensions into a large and sparse two-dimensional matrix, making the exact calculation of all singular values infeasible due to hardware limitations. In particular, this is true for matrices that represent convolutional mappings with large inputs and a high number of channels. Existing efficient methods leverage the Fast Fourier transformation (FFT) to transform convolutional mappings into the frequency domain, enabling the computation of singular values for matrices representing convolutions with larger input and channel dimensions. For a constant number of channels in a given convolution, an FFT can compute N singular values in O(N log N) complexity. In this work, we propose an approach of complexity O(N) based on local Fourier analysis, which additionally exploits the shift invariance of convolutional operators. We provide a theoretical analysis of our algorithm’s runtime and validate its efficiency through numerical experiments. Our results demonstrate that our proposed method is scalable and offers a practical solution to calculate the entire set of singular values – along with the corresponding singular vectors if needed – for high-dimensional convolutional mappings.
         </p>
+      </section>
+
+      <!-- MOTIVATION -->
+      <section id="motivation" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+        <h2 class="text-2xl font-semibold">Motivation</h2>
+        <p>
+          Let $$ A: \mathbb{R}^{m \times n \times c_{in}} \longrightarrow \mathbb{R}^{m \times n \times c_{out}} $$a convolution mapping, i.e., a linear and translation-invariant transformation with $m, n$ spatial input dimension and $c_{in}$ and $c_{out}$  the respective number of input and output channels. The singular values of such a mapping reveals for example insights into regularization and robustness. However, the singular value decomposition is typically computed from matrices. In matrix representation, the convolution becomes a large sparse banded matrix, cf., Fig. 1(a).  If $m = n$ and $c = c_{in} = c_{out}$ the computation complexity to compute the SVD of the convolution matrix is $\mathcal{O}(n^6c^3)$. It is easy to see, that this explicit SVD computation becomes infeasible.
+        </p>
+        <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold mb-3 text-center">Matrix representation of $3 \times 3$ convolution on $m \times n$ input.</h3>
+            <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+              <img src="./assets/images/conv_matrix-1.png" 
+                  alt="motivation_image0" 
+                  loading="lazy" 
+                  class="md:w-1/3 h-auto object-cover">
+            </figure>
+          </div>
+          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+            <div class="space-y-3">
+              <h3 class="text-xl font-semibold mb-3 text-center">Matrix composed of $m \cdot n$ blocks  of size $c_{in} \times c_{out}$</h3>
+              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+                <img
+                  src="./assets/images/block_matrices-1.png"
+                  alt="motivation_image0"
+                  loading="lazy"
+                  class="md:w-1/3 h-auto object-cover"
+                >
+              </figure>
+            </div>
       </section>
 
       <!-- METHOD OVERVIEW -->
       <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Method Overview</h2>
         <p>
-          <b>Step 1:</b> Construct the Gaussian primitive representations by projecting information relevant for uncertainty estimation (training error, training-view coverage, field-of-view occurrences) onto them. The projection for training error and training-view coverage can be direction-dependent.
-          <br><b>Step 2:</b> Render uncertainty feature maps based on the Gaussian primitive representations.
-          <br><b>Step 3:</b> Perform pixel-wise regression on the uncertainty feature maps to obtain pixel-level uncertainty predictions. The regression model is trained on one or few holdout views to predict the true rendering/depth error.
+          To efficiently compute the SVD for large convolution mappings for large input and channel dimensions, we exploit the translation-invariance by using local Fourier analysis, which is a method developed for the analysis of iterative solvers.  We make use of the convolution theorem, that states, that convolutions diagonalize under Fourier transform. In particular, by the application of a Fourier transform, the convolution becomes a block-diagonal operator and instead of computing the SVD from the large sparse matrix, the SVD can be computed from the smaller, independent block matrices. 
+
+          A related approach is based on FFT and requires a complexity of $\mathcal{O}(n^2c^2(c + \log n))$. By exploiting the translation-invariance of the convolution operator, our approach requires only a complexity of $\mathcal{O}(n^2 c^3)$, which is asymptotically optimal with respect to the input dimension. 
+
+          To formalize this, we express convolutional mappings as multiplication operators. To that end, we assume periodic boundary conditions, which corresponds to an infinite repetition of the input across space. Furthermore, the convolution acts on a local neighborhood $\mathcal{N}$, e.g., a $3 \times 3$ kernel centered around a spatial coordinate $x$, cf. Fig. 2) 
+
+          Figure 2: $3 \times 3$ kernel neighborhood centered around $x$.  
+          
+          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+            <div class="space-y-3">
+              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+                <img src="./assets/images/kernel-1.png" 
+                    alt="method_image0" 
+                    loading="lazy" 
+                    class="md:w-1/3 h-auto object-cover">
+              </figure>
+            </div>
+          ⠀
+
+          Collecting all coupled input and output channels corresponding to each neighboorhood $\delta \in \mathcal{N}$ location yields a matrix 
+          $$ M_A^{(\delta)} \in \mathbb{R}^{c_{out}} \times  \mathbb{R}^{c_{in}}.$$
+          With that the convolution of $A$ with an input $f$ evaluated at $x$ can be written as a multiplication operator 
+          $$
+            (A *f)(x) = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)}  \cdot f(x + \delta).
+          $$
+          To apply the convolution theorem, we choose the Fourier mode $f_k = e^{2 \pi \mathtt{i} \langle k, x \rangle}$ as ansatz function, with $k$ denoting a frequency. The convolution of $A$ with $f_k$ reduces to 
+          $$ 
+          (A \ast f_k)(x) = \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, x + \delta \rangle} = \underbrace{\left(
+                  \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, \delta \rangle}
+                  \right)}_{A_k}
+                  e^{2 \pi \mathtt{i} \langle k, x \rangle} = A_k \cdot f_k,
+          $$
+          i.e., a matrix vector multiplication. For each frequency $k$ we obtain a symbol matrix $A_k  \in \mathbb{C}^{c_{out} \times c_{in}}$ and thus the convolution becomes a block diagonal operator. With that, the SVD can now be computed from each matrix $A_k$ independently as
+          $$
+            A_k = U_k \Sigma_k V^*_k,
+          $$
+          where $U_k, V_k^*$ are unitary matrices containing the singular vectors and $\Sigma_k$ is diagonal with singular values as entries. To that end the SVD by LFA can be viewed as a two-staged diagonalization 
+          1. (Block-) Diagonalization by Fourier transform 
+          2. Diagonalization of the block-diagonal matrix by SVD
+
+          This process based on local Fourier analysis is summarized in the following algorithm.
+
+            $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
+            $\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$,  ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
+            ${K = X \times Y}$
+            $\mathtt{1:}$ for $k \in K$  do:                                                                      $\triangleright$ $\mathcal{O}(m\cdot n)$
+            $\mathtt{2:}$        $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$                                                 $\triangleright$ $\mathcal{O}(1)$
+            $\mathtt{3:}$        $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$                                                      $\triangleright$ $\mathcal{O}(c^3)$
+            $\mathtt{4:}$ end for
+            $\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
+
+          Consequently, the overall complexity to compute the SVD by LFA requires only a complexity $\mathcal{O}(n^2 c^3)$ , in the case of a square input.
         </p>
-        <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-          <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Method Figure</h3>
-            <figure class="rounded-lg overflow-hidden">
-              <img src="./assets/images/method_fig.svg" 
-                  alt="method_image0" 
-                  loading="lazy" 
-                  class="w-full h-auto object-cover">
-            </figure>
-          </div>
       </section>
       
       <!-- results -->
@@ -205,16 +272,24 @@
           <!-- Explanatory text -->
           <div class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
               <h3 class="font-semibold text-lg">
-                Uncertainty Estimation
+                Execution runtime
               </h3>
               <p class="text-sm leading-relaxed">
-                AUSE and Pearson correlation between uncertainty map and rendering/depth error on LF, MipNeRF360 and LLFF datasets. PRIMU used direction-dependent uncertainty feature maps.
+                Besides the analysis of the computational complexity we study the execution runtime in seconds ($s$) for different input sizes $n$. The number of channels is fixed to $16$ for in- and output channels.
+
+                We begin by comparing the runtimes of the explicit computation and the Fourier-based computations in Figure 3. For the computation of the explicit SVD we observe that the runtime grows rapidly with increasing input size. The maximum tractable size we were able to decompose was an input of $64 \times 64$. The computation of the corresponding $\approx 65$ thousand singular values took around 14 hours. On the other hand, the SVDs by Fourier-based approaches scale better. At $n=64$ the computation of $\approx 65$ thousand singular values takes only $\approx 0.1$ seconds. For very small input sizes, i.e., $n=4$, the FFT-based approach is slightly faster. When increasing the input dimension, our LFA-based approach becomes dominant. For example for an input of size $512 \times 512$ our LFA-based approach is about $14.5 \%$ faster. Furthermore, we observe, that Fourier-based approaches are scalable to very large input dimensions, as illustrated in Figure 3(b). 
+
+                As the input size increases, our LFA-based approach scales better than the FFT-based approach. For example at $n = 2^{14}$, which corresponds to the computation of $4$ billion singular values. With the FFT-based approach the compuation of $4$ billion singular values takes approximatively $3$ hours, with our LFA-based approach we obtain the same singular values in approximatevly $2$ hours. This corresponds to an improvement of $30.6\%$.
+
+                Figure 3(a): Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
+                ![]('figs/runtime-lfa_vs_fft-loglog-1.png')
+                Figure 3(b): Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
               </p>
           </div>
       
           <!-- Chart -->
           <div class="flex-1 overflow-x-auto">
-              <img src="./assets/images/tabel_UE.png" alt="table1" class="chart-image w-full border rounded-md" />
+              <img src="./assets/images/runtime-lfa_vs_fft-xlog-1.png" alt="table1" class="chart-image w-full border rounded-md" />
           </div>
           </div>
       
@@ -223,30 +298,34 @@
               class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
               <!-- Explanatory text -->
               <div
-                  class="space-y-3 mb-4 min-[1360px]:mb-0">
+                  class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
                   <h3 class="font-semibold text-lg">
-                    Rendering Error Uncertainty Maps
+                    Effect of boundary conditions
                   </h3>
+                  <p>
+                    In order to enable diagonalization in the Fourier-domain, we assumed periodic boundary conditions. However, in CNNs, typically Dirichelt boundary conditions, i.e., zero padding, is applied. To this end, we studied the effect of boundary conditions on the singular values in Figure 4. 
+                    
+                    Figure 4 "Effect on Dirichlet and periodic boundary conditions on the Singular values for input sizes in $n$ 
+                    
+                    For small $n$ the boundary effects dominate, as the singular values differ noticeably. Nevertheless, as the input dimension increases, the influence becomes negligible and consequently, the computation by LFA remains accurate for large input feature maps in practical applications. 
+                  </p>
+              </div>
                   <!-- Chart -->
                   <div class="flex-1 overflow-x-auto">
-                    <img src="./assets/images/UE_visual_comparison.png" alt="table2" class="chart-image w-full border rounded-md"/>
+                    <img src="./assets/images/boundary_cond.png" alt="table2" class="chart-image w-full border rounded-md"/>
                 </div>
               </div>
-          </div>
 
         <!-- ─────────────────────────────────── -->
         <div
             class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
             <!-- Explanatory text -->
             <div
-                class="space-y-3 mb-4 min-[1360px]:mb-0">
+                class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
                 <h3 class="font-semibold text-lg">
-                  Depth Uncertainty Maps
+                  Memory layout
                 </h3>
-                <!-- Chart -->
-                <div class="flex-1 overflow-x-auto">
-                  <img src="./assets/images/UE_visual_comparison_depth.png" alt="table3" class="chart-image w-full border rounded-md"/>
-              </div>
+                <p>Additionally, in our experiments we observed, that our LFA-based implementation yields an memory layout, which allows for a faster computation of the subsequent SVD by a standard routine such as $\mathtt{NumPy}$.</p>
             </div>
         </div>
       </section>
@@ -255,8 +334,8 @@
       <section id="resources" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Resources & Links</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv abstract &amp; BibTeX</a></li>
+          <li><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/vanbetteray/conv_svd_by_lfa" class="text-blue-600 hover:underline">GitHub</a></li>
         </ul>
       </section>
 
@@ -289,10 +368,10 @@
           </div>
       
           <!-- Just scan it -->
-          <div class="w-80 flex flex-col items-center">
-            <a href="https://just-scan-it-3d.uni-wuppertal.de/" target="_blank" rel="noopener noreferrer">
+          <div class="w-40 flex flex-col items-center">
+            <a href="https://www.ki-deltalearning.de/" target="_blank" rel="noopener noreferrer">
               <img
-                src="./assets/images/proj_3.png"
+                src="./assets/images/project-delta-learning.png"
                 alt="Just scan it 3d Logo"
                 loading="lazy"
                 class="w-full h-auto"
@@ -300,17 +379,26 @@
             </a>
             <p class="mt-2 text-sm text-gray-600 text-center">
               <a
-                href="https://just-scan-it-3d.uni-wuppertal.de/"
+                href="https://www.ki-deltalearning.de/"
                 class="text-blue-600 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Just scan it 3D
+                KI Delta Learning
               </a>
             </p>
           </div>
         </div>
-        <p>T.G. P.S., and M.R. acknowledge support by the state of North Rhine-Westphalia and the European Union within the EFRE/JTF project "Just scan it 3D", grant no. EFRE-20800529. E.H. and M.R.\acknowledge support through the junior research group project "UnrEAL" by the German Federal Ministry of Education and Research (BMBF), grant no. 01IS22069.</p>
+        <p>This work is partially supported by the German Federal Ministry for Eco-
+          nomic Affairs and Climate Action, within the project “KI Delta Learning”
+          (grant no. 19A19013Q) and partially supported by the German Federal Ministry of Research and Technology and Space.
+          <br><br>∗∗ M.R. acknowledges support by the German Federal Ministry of Education
+          and Research within the junior research group project “UnrEAL” (grant no.
+          01IS22069).
+          <br><br>
+          ∗∗∗ The contribution of K.K. is partially funded by the European Union’s
+          HORIZON MSCA Doctoral Networks programme project AQTIVATE (grant
+          no. 101072344)</p>
       </section>
 
       <!-- CITATION (bottom) -->
@@ -324,12 +412,14 @@
                       bg-gray-100 rounded-lg p-3
                       text-[0.70rem] leading-5 font-mono
                       text-gray-700 select-all">
-                      @article{gottwald2025primu,
-                        title={PRIMU: Uncertainty Estimation for Novel Views in Gaussian Splatting from Primitive-Based Representations of Error and Coverage},
-                        author={Gottwald, Thomas and Heinert, Edgar and Stehr, Peter and Galappaththige, Chamuditha Jayanga and Rottmann, Matthias},
-                        journal={arXiv:2508.02443},
-                        year={2025}
-                      }
+                      @inproceedings{vanBetteray2025LFA,  
+                        author = {Antonia van Betteray and Matthias Rottmann and Karsten Kahl},  
+                        title = {LFA Applied to CNNs: Efficient Singular Value Decomposition of Convolutional Mappings by Local Fourier Analysis},  
+                        booktitle = {Frontiers in Artificial Intelligence and Applications, Volume 413: ECAI 2025},  
+                        pages = {90--97},  
+                        year = {2025},  
+                        doi = {10.3233/FAIA250793},  
+                        publisher = {IOS Press} }
           </pre>
 
           <!-- copy‑to‑clipboard button -->
@@ -362,7 +452,7 @@
         <h2 class="text-2xl font-semibold">Contact</h2>
         <p class="text-sm">Have questions or want to collaborate? Reach out:</p>
         <ul class="space-y-1 text-sm">
-          <li>Email: <a href="mailto:gottwald[at]uni-wuppertal.de" class="text-blue-600 hover:underline">gottwald[at]uni-wuppertal.de</a></li>
+          <li>Email: <a href="mailto:antonia.vanbetteray[at]uni-osnabrueck.de" class="text-blue-600 hover:underline">antonia.vanbetteray[at]uni-osnabrueck.de</a></li>
         </ul>
       </section>
 
