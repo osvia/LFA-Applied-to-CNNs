@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TemCap – Project Page</title>
+  <title>PRIMU – Project Page</title>
   <link rel="icon" type="image/png" href="./assets/images/Browser_Icon.png" />
   <!-- Tailwind (via CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -19,9 +19,7 @@
       <nav class="space-y-1">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
-        <a href="#contributions"    class="block hover:underline text-gray-700">Contributions</a>
-        <a href="#metrics"    class="block hover:underline text-gray-700">Metrics</a>
-        <a href="#impact"    class="block hover:underline text-gray-700">Impact</a>
+        <a href="#results"    class="block hover:underline text-gray-700">Results</a>
         <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
@@ -32,8 +30,8 @@
       <div>
         <h3 class="font-semibold mb-1">Paper Links</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv page</a></li>
+          <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
+          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
         </ul>
       </div>
     </div>
@@ -48,9 +46,7 @@
       <nav class="space-y-2 mb-6 text-sm leading-relaxed">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
         <a href="#method"     class="block hover:underline text-gray-700">Method</a>
-        <a href="#contributions"    class="block hover:underline text-gray-700">Contributions</a>
-        <a href="#metrics"    class="block hover:underline text-gray-700">Metrics</a>
-        <a href="#impact"    class="block hover:underline text-gray-700">Impact</a>
+        <a href="#results"    class="block hover:underline text-gray-700">Results</a>
         <a href="#resources"  class="block hover:underline text-gray-700">Resources</a>
         <a href="#acks"       class="block hover:underline text-gray-700">Acknowledgments</a>
         <a href="#citation"   class="block hover:underline text-gray-700">Citation</a>
@@ -60,8 +56,8 @@
       <hr class="my-6">
       <h3 class="font-semibold mb-2 text-sm">Paper Links</h3>
       <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed mb-6">
-        <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
-        <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv page</a></li>
+        <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
+          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
       </ul>
       <hr class="my-6">
     </aside>
@@ -72,34 +68,35 @@
       <!-- HERO -->
       <header class="text-center mb-12">
         <h1 class="text-4xl font-extrabold leading-tight">
-          Temporal Object Captioning for Street Scene Videos from LiDAR Tracks
+          Uncertainty Estimation for Novel Views in Gaussian Splatting from Primitive-Based Representations of Error and Coverage
         </h1>
 
         <!-- AUTHORS -->
         <p class="text-sm text-gray-500 mt-3">
+          <a href="mailto:gottwald[at]uni-wuppertal.de"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Thomas Gottwald</a><sup>1</sup> •
+          <a href="mailto:edgar.heinert[at]uni-osnabrueck.de"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Edgar Heinert</a><sup>2</sup> •
+          <a href="mailto:stehr[at]uni-wuppertal.de"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Peter Stehr</a><sup>1</sup> •
+          <a href="mailto:chamuditha.galappaththige[at]qut.edu.au"
+            class="text-blue-600 hover:underline" target="_blank"
+            rel="noopener noreferrer">Chamuditha Jayanga Galappaththige</a><sup>3</sup> •
           <a href="https://osvia.github.io/team.html"
             class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Vignesh Gopinathan</a><sup>1,2</sup> •
-          <a href="mailto:urs.zimmermann[at]aptiv.com"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Urs Zimmermann</a><sup>2</sup> •
-          <a href="mailto:michael.arnold[at]aptiv.com"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Michael Arnold</a><sup>2</sup> •
-          <a href="https://osvia.github.io/team.html"
-            class="text-blue-600 hover:underline" target="_blank"
-            rel="noopener noreferrer">Matthias Rottmann</a><sup>3</sup>
+            rel="noopener noreferrer">Matthias Rottmann</a><sup>2</sup>
         </p>
 
         <!-- AFFILIATION FOOTNOTE -->
         <p class="text-xs text-gray-500 mt-1">
           <sup>1</sup> Department&nbsp;of&nbsp;Mathematics, University&nbsp;of&nbsp;Wuppertal, Wuppertal, Germany
           <br>
-          <sup>2</sup> Aptiv, Germany
+          <sup>2</sup> Institute of Computer Science, University of Osnabrück, Osnabrück, Germany
           <br>
-          <sup>3</sup> Institute of Computer Science, Osnabrück University, Osnabrück, Germany
-          <br><br>
-          Winter Conference on Applications of Computer Vision (WACV), 2026
+          <sup>3</sup> Centre for Robotics, Queensland University of Technology, Brisbane, Australia
         </p>
 
         <!-- LOGO STRIP -->
@@ -120,8 +117,8 @@
           </a>
 
           <!-- Aptiv -->
-          <a href="https://www.aptiv.com/" target="_blank" rel="noopener noreferrer" class="block h-10">
-            <img src="./assets/images/aptiv_logo_color_rgb.png" alt="Aptiv" class="h-full w-auto" loading="lazy">
+          <a href="https://www.qut.edu.au/" target="_blank" rel="noopener noreferrer" class="block h-10">
+            <img src="./assets/images/QUT-logo.png" alt="Aptiv" class="h-full w-auto" loading="lazy">
           </a>
 
           <!-- Add additional logos here (duplicate & adapt) -->
@@ -132,7 +129,7 @@
         <div class="flex flex-wrap justify-center gap-3 mt-6">
 
           <!-- Paper / Document icon -->
-          <a href="https://arxiv.org/abs/2505.16594"
+          <a href="https://arxiv.org/abs/2508.02443"
             class="inline-flex items-center px-6 py-3 rounded-xl bg-blue-600 text-white font-semibold hover:bg-blue-700">
             <!-- Heroicons outline: DocumentText -->
             <svg class="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"
@@ -151,8 +148,12 @@
 
         <!-- Title Images Row (unchanged) -->
         <div class="flex flex-wrap justify-center gap-2 mt-6">
-          <img src="./assets/images/figure1.png"  alt="Title image 1"
-              class="h-64 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
+          <img src="./assets/images/africa_3_all_depth_pred_error.png"  alt="Title image 1"
+              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
+          <img src="./assets/images/africa_3_all_rgb_pred_error.png"  alt="Title image 2"
+              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
+          <img src="./assets/images/africa_3_all_rgb_render.png"  alt="Title image 3"
+              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
         </div>
       </header>
       <!-- /HERO -->
@@ -162,7 +163,15 @@
       <section id="abstract" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
         <h2 class="text-2xl font-semibold">Abstract</h2>
         <p>
-          We introduce a fully automated LiDAR‑based captioning pipeline that produces object‑level, temporally grounded descriptions of street‑scene videos directly from object tracks. The captions encode lane position, motion relative to the host vehicle, and temporal transitions (e.g., lane changes). Such captions enable small and efficient video captioners like SwinBERT, trained on only the front‑camera frames to learn richer temporal semantics. Across three datasets—our proprietary data, Waymo, and NuScenes—models trained with our captions demonstrate improved temporal reasoning and reduced dependence on static background cues. We quantify this reduction using our proposed Visual Bias Measure (VBM), which evaluates a model’s reliance on scene appearance versus motion-driven dynamics.
+          We introduce PRIMU (Primitive-based Representations of Uncertainty), a post-hoc uncertainty estimation framework for Gaussian Splatting.
+          PRIMU constructs primitive-level representations of training-view coverage, training error and field-of-view occurrences.
+          Based on these representations, we render uncertainty feature maps, on which a pixel-wise regression is performed to obtain final, pixel-level uncertainty estimates.
+          <br>
+          • We demonstrate the effectiveness of our approach for estimating uncertainty in rendering and depth error.
+          <br>
+          • Additionally, we study uncertainty estimation on foreground objects and backgrounds, as well as the use of different feature map combinations and the generalization capabilities of the regression models to unseen scenes.
+          <br>
+          • We use the proposed uncertainty feature maps to directly guide active view selection, prioritizing viewpoints with high uncertainty indicators.
         </p>
       </section>
 
@@ -170,177 +179,138 @@
       <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Method Overview</h2>
         <p>
-          Our captioning pipeline automatically converts LiDAR object tracks into rich, temporally grounded descriptions without any human annotation. The system uses a set of template sentences with placeholders that are filled using three types of attributes computed from LiDAR over time: lane position, motion relative to the host vehicle, and object type.
-          <br><br>
-          The procedure runs in two stages:
-          <br><br>
-          <b>A. Host-vehicle captioning:</b>
-          The host vehicle’s velocity and yaw-rate signals are analyzed to segment the video into short clips, each representing a single host action (e.g., “decelerating while steering left”). These segments receive a simple template-based host caption that provides context for interpreting other objects’ behaviors.
-          <br><br>
-          <b>B. Neighbor (object) captioning:</b>
-          For each segment, LiDAR-based 3D detection and tracking models yield trajectories for surrounding agents. Only moving objects within a defined region in front of the host vehicle and visible to the front camera are retained. At each timestamp, objects are assigned:
-          <br>
-          * a lane tag (left, right, host, oncoming, left/right-lateral),
-          <br>
-          * a motion tag (approaching, moving away, constant distance, stationary), and
-          <br>
-          * an object tag (car, truck, bike, pedestrian).
-          <br><br>
-          These tags form a time series that is compressed into a sequence of behavioral changes. Each unique state generates one sentence, enabling captions that naturally express transitions such as lane changes or shifts in motion. The first sentence introduces the object and the subsequent sentences describe how its behavior evolves over time.
-          <br><br>
-          The combinatorial template system supports thousands of distinct captions, allowing scalable generation of detailed, multi-sentence object-level descriptions directly from raw LiDAR data.
+          <b>Step 1:</b> Construct the Gaussian primitive representations by projecting information relevant for uncertainty estimation (training error, training-view coverage, field-of-view occurrences) onto them. The projection for training error and training-view coverage can be direction-dependent.
+          <br><b>Step 2:</b> Render uncertainty feature maps based on the Gaussian primitive representations.
+          <br><b>Step 3:</b> Perform pixel-wise regression on the uncertainty feature maps to obtain pixel-level uncertainty predictions. The regression model is trained on one or few holdout views to predict the true rendering/depth error.
         </p>
         <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-          <!-- Column 1: nd‑to‑end data → caption → training pipeline -->
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Video captioning model</h3>
-            <figure class="rounded-lg overflow-hidden shadow-sm">
-              <img src="./assets/images/method_image0.png" 
+            <h3 class="text-xl font-semibold mb-3 text-center">Method Figure</h3>
+            <figure class="rounded-lg overflow-hidden">
+              <img src="./assets/images/method_fig.svg" 
                   alt="method_image0" 
                   loading="lazy" 
                   class="w-full h-auto object-cover">
             </figure>
           </div>
-          <p>
-            The LiDAR-generated captions are used to train SwinBERT, a compact video-captioning transformer that operates solely on front-camera RGB frames. Training follows the masked-language modeling (MLM) strategy from the original SwinBERT design, with the model learning to predict the LiDAR-derived object-level captions from uniformly sampled frames per video clip.
-          </p>
-
-          <!-- Column 2: LiDAR‑to‑mask projection (convex hull) -->
-          <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Object Mask generation (optional step)</h3>
-            <figure class="rounded-lg overflow-hidden shadow-sm max-w-xl mx-auto">
-              <img src="./assets/images/method_image1.png" 
-                  alt="method_image1" 
-                  loading="lazy" 
-                  class="w-full h-auto object-cover">
-            </figure>
-          </div>
-          <p>
-            To further reduce reliance on background appearance and strengthen temporal grounding, the pipeline introduces an automated LiDAR-based object masking step. For each tracked object:
-            <br><br>
-            <b>A. 3D point selection:</b> LiDAR points inside the object’s 3D bounding box are extracted.
-            <br><b>B. Projection:</b> These points are projected into the front-camera image using calibrated LiDAR-to-camera transforms.
-            <br><b>C. Mask construction:</b> A tight convex hull is computed over the projected points (via the monotone-chain algorithm) and rasterized to create a clean object-specific pixel mask.
-            <br><br>
-            The resulting masks highlight the exact object referenced by the caption and suppress irrelevant background context, improving the model’s ability to learn dynamics rather than visual bias.
-          </p>
-        </div>
-      </section>
-
-      <!-- Key Contributions and Results -->
-      <section id="contributions" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
-        <h2 class="text-2xl font-semibold">Key Contributions and Results</h2>
-        <p>
-          • Scalable, generic captioning from LiDAR for temporally rich, object‑level descriptions without human labels.
-          <br>• Temporal understanding beats strong baselines on captioning and retrieval across seen and unseen datasets.
-          <br>• Visual Bias Measure (VBM), simple BLEU‑based metric, that quantifies reliance on static visual similarity. Training with our temporal captions consistently lowers VBM.
-          <br>• Mask‑augmented training further improves generalization by directing attention to the object of interest, better temporal grounding between caption and the associated object.
-
-        </p>
       </section>
       
-      <!-- METRICS -->
+      <!-- results -->
       
-      <section id="metrics" class="space-y-6 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
-          <h2 class="text-2xl font-semibold">Metrics at a Glance</h2>
+      <section id="results" class="space-y-6 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+          <h2 class="text-2xl font-semibold">Qualitative Results</h2>
           <!-- ──  Captioning Quality ───────────────────────────────────── -->
           <div
           class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
           <!-- Explanatory text -->
           <div class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
               <h3 class="font-semibold text-lg">
-                Captioning Quality (BLEU4 / CIDEr / SPICE)
+                Uncertainty Estimation
               </h3>
               <p class="text-sm leading-relaxed">
-                Trained solely on single-sentence captions from our proprietary dataset, the model generalizes well to both Waymo and NuScenes. It outperforms InternVideo, ViCLIP, and CLIP, even though those baselines face the easier task of selecting from predefined candidate captions.
+                AUSE and Pearson correlation between uncertainty map and rendering/depth error on LF, MipNeRF360 and LLFF datasets. PRIMU used direction-dependent uncertainty feature maps.
               </p>
           </div>
       
           <!-- Chart -->
           <div class="flex-1 overflow-x-auto">
-              <img src="./assets/images/table1.png" alt="table1" class="chart-image w-full border rounded-md" />
+              <img src="./assets/images/tabel_UE.png" alt="table1" class="chart-image w-full border rounded-md" />
           </div>
           </div>
       
-        <!-- ── Visual Bias Measure (VBM) ─────────────────────────────────── -->
+        <!-- ─────────────────────────────────── -->
           <div
               class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
               <!-- Explanatory text -->
               <div
-                  class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
+                  class="space-y-3 mb-4 min-[1360px]:mb-0">
                   <h3 class="font-semibold text-lg">
-                    Visual Bias Measure (VBM)
+                    Rendering Error Uncertainty Maps
                   </h3>
-                  <p class="text-sm leading-relaxed">
-                    VBM captures how much retrieval performance drops, measured using BLEU4, when visually similar videos are removed from the candidate 
-                    set in a video-to-video retrieval task. A <b>lower VBM</b> indicates that the model is less dependent on static scene appearance and relies 
-                    more on true temporal cues. Our training achieves the <b>lowest VBM across all datasets</b>, and adding mask-based augmentation further 
-                    reduces visual bias, lowering VBM by roughly <b>5 percentage points</b> on Waymo and <b>2 percentage points</b> on NuScenes.
-                  </p>
-              </div>
-
-              <!-- Chart -->
-              <div class="flex-1 overflow-x-auto">
-                  <img src="./assets/images/table2.png" alt="table2" class="chart-image w-full border rounded-md"/>
+                  <!-- Chart -->
+                  <div class="flex-1 overflow-x-auto">
+                    <img src="./assets/images/UE_visual_comparison.png" alt="table2" class="chart-image w-full border rounded-md"/>
+                </div>
               </div>
           </div>
 
-        <!-- ── Zero‑Shot Generalization to Longer Captions ─────────────────────────────────── -->
+        <!-- ─────────────────────────────────── -->
         <div
-        class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
-        <!-- Explanatory text -->
-        <div
-            class="space-y-3 mb-4 min-[1360px]:mb-0 min-[1360px]:w-1/3">
-            <h3 class="font-semibold text-lg">
-              Zero‑Shot Generalization to Longer Captions
-            </h3>
-            <p class="text-sm leading-relaxed">
-              Despite training only on single‑sentence captions, our embeddings retrieve videos 
-              for <b>two‑sentence</b> captions (more complex maneuvers) with a <b>~20% higher</b> mean BLEU4 than the best baseline.
-            </p>
+            class="flex flex-col min-[1360px]:flex-row min-[1360px]:items-start min-[1360px]:gap-8">
+            <!-- Explanatory text -->
+            <div
+                class="space-y-3 mb-4 min-[1360px]:mb-0">
+                <h3 class="font-semibold text-lg">
+                  Depth Uncertainty Maps
+                </h3>
+                <!-- Chart -->
+                <div class="flex-1 overflow-x-auto">
+                  <img src="./assets/images/UE_visual_comparison_depth.png" alt="table3" class="chart-image w-full border rounded-md"/>
+              </div>
+            </div>
         </div>
-
-        <!-- Chart -->
-        <div class="flex-1 overflow-x-auto">
-            <img src="./assets/images/table3.png" alt="table3" class="chart-image w-full border rounded-md"/>
-        </div>
-    </div>
-
-      </section>
-
-      <!-- Broader Impact & Potential -->
-      <section id="impact" class="space-y-4 lg:max-w-6xl  lg:mx-auto">
-        <h2 class="text-2xl font-semibold">Broader Impact & Potential</h2>
-        <p>
-          • <b>Scaling data generation:</b> The trained video captioning model can be used to generate temporal object captions for camera-only dataset. Additionally, any LiDAR‑equipped dataset can be converted into rich temporal captioning dataset at low cost using out pseudo-labeling method.  
-          <br>
-          • <b>Beyond captioning:</b> The learned embeddings improve <b>video retrieval</b> by maneuvers and can aid <b>trajectory forecasting, risk reasoning, or behavior search</b> tools. 
-          <br>
-          • <b>Temporal understanding metric:</b> VBM, a metric to quantitaively evaluate temporal understanding capabilities of models. Lower VBM suggests robustness to background changes—useful for being agnostic to geographic and seasonal shifts.
-        </p>
       </section>
 
       <!-- RESOURCES -->
       <section id="resources" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Resources & Links</h2>
         <ul class="list-disc list-inside space-y-2">
-          <li><a href="https://arxiv.org/pdf/2505.16594" class="text-blue-600 hover:underline">PDF (5.35 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2505.16594" class="text-blue-600 hover:underline">arXiv abstract &amp; BibTeX</a></li>
-          <li><a href="#" class="text-blue-600 hover:underline">Code (coming soon)</a></li>
+          <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
+          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv abstract &amp; BibTeX</a></li>
         </ul>
       </section>
 
       <!-- ACKNOWLEDGMENTS -->
       <section id="acks" class="space-y-6 px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Acknowledgments</h2>
-        <div class="mt-4 w-40 flex flex-col items-center">
-          <a href="https://osvia.github.io/" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/images/KeyVisual_Dark.png" alt="OSVIA Lab Logo" loading="lazy" class="w-full h-auto">
-          </a>
-          <p class="mt-2 text-sm text-gray-600 text-center">
-            <a href="https://osvia.github.io/" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">OSVIA Lab</a>
-          </p>
+      
+        <!-- Panels row -->
+        <div class="mt-4 flex gap-8">
+          <!-- OSVIA panel -->
+          <div class="w-40 flex flex-col items-center">
+            <a href="https://osvia.github.io/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./assets/images/KeyVisual_Dark.png"
+                alt="OSVIA Lab Logo"
+                loading="lazy"
+                class="w-full h-auto"
+              >
+            </a>
+            <p class="mt-2 text-sm text-gray-600 text-center">
+              <a
+                href="https://osvia.github.io/"
+                class="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                OSVIA Lab
+              </a>
+            </p>
+          </div>
+      
+          <!-- Just scan it -->
+          <div class="w-80 flex flex-col items-center">
+            <a href="https://just-scan-it-3d.uni-wuppertal.de/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./assets/images/proj_3.png"
+                alt="Just scan it 3d Logo"
+                loading="lazy"
+                class="w-full h-auto"
+              >
+            </a>
+            <p class="mt-2 text-sm text-gray-600 text-center">
+              <a
+                href="https://just-scan-it-3d.uni-wuppertal.de/"
+                class="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Just scan it 3D
+              </a>
+            </p>
+          </div>
         </div>
+        <p>T.G. P.S., and M.R. acknowledge support by the state of North Rhine-Westphalia and the European Union within the EFRE/JTF project "Just scan it 3D", grant no. EFRE-20800529. E.H. and M.R.\acknowledge support through the junior research group project "UnrEAL" by the German Federal Ministry of Education and Research (BMBF), grant no. 01IS22069.</p>
       </section>
 
       <!-- CITATION (bottom) -->
@@ -354,12 +324,12 @@
                       bg-gray-100 rounded-lg p-3
                       text-[0.70rem] leading-5 font-mono
                       text-gray-700 select-all">
-                      @inproceedings{temporal-object-captioning-wacv2026,
-                        title={Temporal Object Captioning for Street Scene Videos from LiDAR Tracks},
-                        author={To be updated post-review},
-                        booktitle={WACV},
-                        year={2026},
-                        note={Under review; project page}}
+                      @article{gottwald2025primu,
+                        title={PRIMU: Uncertainty Estimation for Novel Views in Gaussian Splatting from Primitive-Based Representations of Error and Coverage},
+                        author={Gottwald, Thomas and Heinert, Edgar and Stehr, Peter and Galappaththige, Chamuditha Jayanga and Rottmann, Matthias},
+                        journal={arXiv:2508.02443},
+                        year={2025}
+                      }
           </pre>
 
           <!-- copy‑to‑clipboard button -->
@@ -392,7 +362,7 @@
         <h2 class="text-2xl font-semibold">Contact</h2>
         <p class="text-sm">Have questions or want to collaborate? Reach out:</p>
         <ul class="space-y-1 text-sm">
-          <li>Email: <a href="mailto:gopinathan[at]uni-wuppertal.de" class="text-blue-600 hover:underline">gopinathan[at]uni-wuppertal.de</a></li>
+          <li>Email: <a href="mailto:gottwald[at]uni-wuppertal.de" class="text-blue-600 hover:underline">gottwald[at]uni-wuppertal.de</a></li>
         </ul>
       </section>
 

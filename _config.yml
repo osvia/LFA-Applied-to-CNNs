@@ -1,11 +1,11 @@
 # _config.yml
-title: Shape Bias & Robustness
+title: PRIMU
 email: your-email@example.com
 description: >-
-  Project site exploring shape bias and robustness in image classification and segmentation.
+  Project site for PRIMU.
 
 url: "https://marcoschumacher-uniwuppertal.github.io"
-baseurl: "/Shape-Bias-and-Robustness-Evaluation-via-Cue-Decomposition-for-Image-Classification-and-Segmentation"
+baseurl: "/"
 
 
 #theme: minimal-mistakes-jekyll
@@ -15,7 +15,7 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: "Marco Schumacher"
-  avatar: "/assets/images/avatar.png"
-  bio: "Researcher exploring visual cues in deep learning."
+  name: "Admin"
+  avatar: ""
+  bio: ""
   location: "Wuppertal, Germany"
