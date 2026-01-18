@@ -301,7 +301,6 @@
                 As the input size increases, our LFA-based approach scales better than the FFT-based approach. For example at $n = 2^{14}$, which corresponds to the computation of $4$ billion singular values. With the FFT-based approach the compuation of $4$ billion singular values takes approximatively $3$ hours, with our LFA-based approach we obtain the same singular values in approximatevly $2$ hours. This corresponds to an improvement of $30.6\%$.
 
                 Figure 3(a): Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
-                ![]('figs/runtime-lfa_vs_fft-loglog-1.png')
                 Figure 3(b): Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
               </p>
           </div>
