@@ -7,6 +7,22 @@
   <link rel="icon" type="image/png" href="./assets/images/Browser_Icon.png" />
   <!-- Tailwind (via CDN) -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- MathJax configuration -->
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+  };
+</script>
+
+<!-- MathJax loader -->
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
 </head>
 <body class="bg-white text-gray-800">
 
@@ -177,7 +193,7 @@
       <section id="motivation" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
         <h2 class="text-2xl font-semibold">Motivation</h2>
         <p>
-          Let $$ A: \mathbb{R}^{m \times n \times c_{in}} \longrightarrow \mathbb{R}^{m \times n \times c_{out}} $$a convolution mapping, i.e., a linear and translation-invariant transformation with $m, n$ spatial input dimension and $c_{in}$ and $c_{out}$  the respective number of input and output channels. The singular values of such a mapping reveals for example insights into regularization and robustness. However, the singular value decomposition is typically computed from matrices. In matrix representation, the convolution becomes a large sparse banded matrix, cf., Fig. 1(a).  If $m = n$ and $c = c_{in} = c_{out}$ the computation complexity to compute the SVD of the convolution matrix is $\mathcal{O}(n^6c^3)$. It is easy to see, that this explicit SVD computation becomes infeasible.
+          Let $ A: \mathbb{R}^{m \times n \times c_{in}} \longrightarrow \mathbb{R}^{m \times n \times c_{out}} $a convolution mapping, i.e., a linear and translation-invariant transformation with $m, n$ spatial input dimension and $c_{in}$ and $c_{out}$  the respective number of input and output channels. The singular values of such a mapping reveals for example insights into regularization and robustness. However, the singular value decomposition is typically computed from matrices. In matrix representation, the convolution becomes a large sparse banded matrix, cf., Fig. 1(a).  If $m = n$ and $c = c_{in} = c_{out}$ the computation complexity to compute the SVD of the convolution matrix is $\mathcal{O}(n^6c^3)$. It is easy to see, that this explicit SVD computation becomes infeasible.
         </p>
         <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
           <div class="space-y-3">
@@ -225,40 +241,43 @@
               </figure>
             </div>
           ⠀
-
+          <p>
           Collecting all coupled input and output channels corresponding to each neighboorhood $\delta \in \mathcal{N}$ location yields a matrix 
-          $$ M_A^{(\delta)} \in \mathbb{R}^{c_{out}} \times  \mathbb{R}^{c_{in}}.$$
+          $ M_A^{(\delta)} \in \mathbb{R}^{c_{out}} \times  \mathbb{R}^{c_{in}}.$
           With that the convolution of $A$ with an input $f$ evaluated at $x$ can be written as a multiplication operator 
-          $$
+          $
             (A *f)(x) = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)}  \cdot f(x + \delta).
-          $$
+          $
           To apply the convolution theorem, we choose the Fourier mode $f_k = e^{2 \pi \mathtt{i} \langle k, x \rangle}$ as ansatz function, with $k$ denoting a frequency. The convolution of $A$ with $f_k$ reduces to 
-          $$ 
+          $
           (A \ast f_k)(x) = \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, x + \delta \rangle} = \underbrace{\left(
                   \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, \delta \rangle}
                   \right)}_{A_k}
                   e^{2 \pi \mathtt{i} \langle k, x \rangle} = A_k \cdot f_k,
-          $$
+          $
           i.e., a matrix vector multiplication. For each frequency $k$ we obtain a symbol matrix $A_k  \in \mathbb{C}^{c_{out} \times c_{in}}$ and thus the convolution becomes a block diagonal operator. With that, the SVD can now be computed from each matrix $A_k$ independently as
-          $$
+          $
             A_k = U_k \Sigma_k V^*_k,
-          $$
+          $
           where $U_k, V_k^*$ are unitary matrices containing the singular vectors and $\Sigma_k$ is diagonal with singular values as entries. To that end the SVD by LFA can be viewed as a two-staged diagonalization 
           1. (Block-) Diagonalization by Fourier transform 
           2. Diagonalization of the block-diagonal matrix by SVD
 
           This process based on local Fourier analysis is summarized in the following algorithm.
-
-            $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
-            $\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$,  ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
-            ${K = X \times Y}$
-            $\mathtt{1:}$ for $k \in K$  do:                                                                      $\triangleright$ $\mathcal{O}(m\cdot n)$
-            $\mathtt{2:}$        $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$                                                 $\triangleright$ $\mathcal{O}(1)$
-            $\mathtt{3:}$        $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$                                                      $\triangleright$ $\mathcal{O}(c^3)$
-            $\mathtt{4:}$ end for
-            $\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
-
+          </p>
+            <p>
+              $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
+              <br>$\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$,  ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
+              <br>${K = X \times Y}$
+              <br>$\mathtt{1:}$ for $k \in K$  do:                                                                      $\triangleright$ $\mathcal{O}(m\cdot n)$
+              <br>$\mathtt{2:}$        $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$                                                 $\triangleright$ $\mathcal{O}(1)$
+              <br>$\mathtt{3:}$        $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$                                                      $\triangleright$ $\mathcal{O}(c^3)$
+              <br>$\mathtt{4:}$ end for
+              <br>$\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
+            </p>
+          <p>
           Consequently, the overall complexity to compute the SVD by LFA requires only a complexity $\mathcal{O}(n^2 c^3)$ , in the case of a square input.
+          </p>
         </p>
       </section>
       

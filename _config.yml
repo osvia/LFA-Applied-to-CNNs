@@ -19,3 +19,13 @@ author:
   avatar: ""
   bio: ""
   location: "Wuppertal, Germany"
+
+
+#latex support
+markdown: kramdown
+
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+mathjax: true
