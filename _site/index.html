@@ -46,8 +46,8 @@
       <div>
         <h3 class="font-semibold mb-1">Paper Links</h3>
         <ul class="list-disc list-inside space-y-1">
-          <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
+          <li><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/vanbetteray/conv_svd_by_lfa" class="text-blue-600 hover:underline">GitHub Code</a></li>
         </ul>
       </div>
     </div>
@@ -72,8 +72,8 @@
       <hr class="my-6">
       <h3 class="font-semibold mb-2 text-sm">Paper Links</h3>
       <ul class="list-disc list-inside space-y-1 text-sm leading-relaxed mb-6">
-        <li><a href="https://arxiv.org/pdf/2508.02443" class="text-blue-600 hover:underline">PDF (11.8 MB)</a></li>
-          <li><a href="https://arxiv.org/abs/2508.02443" class="text-blue-600 hover:underline">arXiv page</a></li>
+        <li><a href="https://ebooks.iospress.nl/doi/10.3233/FAIA250793" class="text-blue-600 hover:underline">Paper</a></li>
+          <li><a href="https://github.com/vanbetteray/conv_svd_by_lfa" class="text-blue-600 hover:underline">GitHub Code</a></li>
       </ul>
       <hr class="my-6">
     </aside>
@@ -174,8 +174,8 @@
 
         <!-- Title Images Row (unchanged) -->
         <div class="flex flex-wrap justify-center gap-2 mt-6">
-          <img src="./assets/images/#"  alt="Title image 1"
-              class="h-32 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
+          <img src="./assets/images/title.png"  alt="Title image 1"
+              class="h-64 w-auto max-w-[100%] md:max-w-none rounded-lg shadow-sm">
         </div>
       </header>
       <!-- /HERO -->
@@ -195,95 +195,130 @@
         <p>
           Let $ A: \mathbb{R}^{m \times n \times c_{in}} \longrightarrow \mathbb{R}^{m \times n \times c_{out}} $a convolution mapping, i.e., a linear and translation-invariant transformation with $m, n$ spatial input dimension and $c_{in}$ and $c_{out}$  the respective number of input and output channels. The singular values of such a mapping reveals for example insights into regularization and robustness. However, the singular value decomposition is typically computed from matrices. In matrix representation, the convolution becomes a large sparse banded matrix, cf., Fig. 1(a).  If $m = n$ and $c = c_{in} = c_{out}$ the computation complexity to compute the SVD of the convolution matrix is $\mathcal{O}(n^6c^3)$. It is easy to see, that this explicit SVD computation becomes infeasible.
         </p>
-        <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-8">
+          <!-- Left card -->
           <div class="space-y-3">
-            <h3 class="text-xl font-semibold mb-3 text-center">Matrix representation of $3 \times 3$ convolution on $m \times n$ input.</h3>
+            <h3 class="text-xl font-semibold mb-3 text-center">
+              Matrix representation of $3 \times 3$ convolution on $m \times n$ input.
+            </h3>
             <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-              <img src="./assets/images/conv_matrix-1.png" 
-                  alt="motivation_image0" 
-                  loading="lazy" 
-                  class="md:w-1/3 h-auto object-cover">
+              <img
+                src="./assets/images/conv_matrix-1.png"
+                alt="motivation_image0"
+                loading="lazy"
+                class="w-full md:w-2/3 h-auto object-cover"
+              />
             </figure>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (a)</sub>
           </div>
-          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-            <div class="space-y-3">
-              <h3 class="text-xl font-semibold mb-3 text-center">Matrix composed of $m \cdot n$ blocks  of size $c_{in} \times c_{out}$</h3>
-              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-                <img
-                  src="./assets/images/block_matrices-1.png"
-                  alt="motivation_image0"
-                  loading="lazy"
-                  class="md:w-1/3 h-auto object-cover"
-                >
-              </figure>
-            </div>
+        
+          <!-- Right card -->
+          <div class="space-y-3">
+            <h3 class="text-xl font-semibold mb-3 text-center">
+              Matrix composed of $m \cdot n$ blocks of size $c_{in} \times c_{out}$
+            </h3>
+            <p>⠀</p><!--EMPTY ASCII CHARACTER FOR LINE BREAK SPACING-->
+            <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+              <img
+                src="./assets/images/block_matrices-1.png"
+                alt="motivation_image1"
+                loading="lazy"
+                class="w-full md:w-2/3 h-auto object-cover"
+              />
+            </figure>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (b)</sub>
+          </div>
+        </div>
+        
       </section>
 
-      <!-- METHOD OVERVIEW -->
-      <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+     <!-- METHOD OVERVIEW -->
+      <section id="method" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto min-w-0 break-words [overflow-wrap:anywhere]">
         <h2 class="text-2xl font-semibold">Method Overview</h2>
-        <p>
-          To efficiently compute the SVD for large convolution mappings for large input and channel dimensions, we exploit the translation-invariance by using local Fourier analysis, which is a method developed for the analysis of iterative solvers.  We make use of the convolution theorem, that states, that convolutions diagonalize under Fourier transform. In particular, by the application of a Fourier transform, the convolution becomes a block-diagonal operator and instead of computing the SVD from the large sparse matrix, the SVD can be computed from the smaller, independent block matrices. 
 
-          A related approach is based on FFT and requires a complexity of $\mathcal{O}(n^2c^2(c + \log n))$. By exploiting the translation-invariance of the convolution operator, our approach requires only a complexity of $\mathcal{O}(n^2 c^3)$, which is asymptotically optimal with respect to the input dimension. 
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          To efficiently compute the SVD for large convolution mappings for large input and channel dimensions, we exploit the translation-invariance by using local Fourier analysis, which is a method developed for the analysis of iterative solvers. We make use of the convolution theorem, that states, that convolutions diagonalize under Fourier transform. In particular, by the application of a Fourier transform, the convolution becomes a block-diagonal operator and instead of computing the SVD from the large sparse matrix, the SVD can be computed from the smaller, independent block matrices.
+        </p>
 
-          To formalize this, we express convolutional mappings as multiplication operators. To that end, we assume periodic boundary conditions, which corresponds to an infinite repetition of the input across space. Furthermore, the convolution acts on a local neighborhood $\mathcal{N}$, e.g., a $3 \times 3$ kernel centered around a spatial coordinate $x$, cf. Fig. 2) 
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          A related approach is based on FFT and requires a complexity of $\mathcal{O}(n^2c^2(c + \log n))$. By exploiting the translation-invariance of the convolution operator, our approach requires only a complexity of $\mathcal{O}(n^2 c^3)$, which is asymptotically optimal with respect to the input dimension.
+        </p>
 
-          Figure 2: $3 \times 3$ kernel neighborhood centered around $x$.  
-          
-          <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
-            <div class="space-y-3">
-              <figure class="rounded-lg overflow-hidden flex items-center justify-center">
-                <img src="./assets/images/kernel-1.png" 
-                    alt="method_image0" 
-                    loading="lazy" 
-                    class="md:w-1/3 h-auto object-cover">
-              </figure>
-            </div>
-          ⠀
-          <p>
-          Collecting all coupled input and output channels corresponding to each neighboorhood $\delta \in \mathcal{N}$ location yields a matrix 
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          To formalize this, we express convolutional mappings as multiplication operators. To that end, we assume periodic boundary conditions, which corresponds to an infinite repetition of the input across space. Furthermore, the convolution acts on a local neighborhood $\mathcal{N}$, e.g., a $3 \times 3$ kernel centered around a spatial coordinate $x$, cf. Fig. 2)
+        </p>
+
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          Figure 2: $3 \times 3$ kernel neighborhood centered around $x$.
+        </p>
+
+        <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
+          <div class="space-y-3 min-w-0">
+            <figure class="rounded-lg overflow-hidden flex items-center justify-center">
+              <img
+                src="./assets/images/kernel-1.png"
+                alt="method_image0"
+                loading="lazy"
+                class="w-full max-w-xs h-auto object-contain"
+              >
+            </figure>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 2</sub>
+          </div>
+        </div>
+
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          Collecting all coupled input and output channels corresponding to each neighboorhood $\delta \in \mathcal{N}$ location yields a matrix
           $ M_A^{(\delta)} \in \mathbb{R}^{c_{out}} \times  \mathbb{R}^{c_{in}}.$
-          With that the convolution of $A$ with an input $f$ evaluated at $x$ can be written as a multiplication operator 
+          With that the convolution of $A$ with an input $f$ evaluated at $x$ can be written as a multiplication operator
           $
             (A *f)(x) = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)}  \cdot f(x + \delta).
           $
-          To apply the convolution theorem, we choose the Fourier mode $f_k = e^{2 \pi \mathtt{i} \langle k, x \rangle}$ as ansatz function, with $k$ denoting a frequency. The convolution of $A$ with $f_k$ reduces to 
+          To apply the convolution theorem, we choose the Fourier mode $f_k = e^{2 \pi \mathtt{i} \langle k, x \rangle}$ as ansatz function, with $k$ denoting a frequency. The convolution of $A$ with $f_k$ reduces to
           $
           (A \ast f_k)(x) = \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, x + \delta \rangle} = \underbrace{\left(
                   \sum_{\delta \in \mathcal{N}} M^{(\delta)}_{A} \cdot e^{2 \pi \mathtt{i} \langle k, \delta \rangle}
                   \right)}_{A_k}
                   e^{2 \pi \mathtt{i} \langle k, x \rangle} = A_k \cdot f_k,
           $
-          i.e., a matrix vector multiplication. For each frequency $k$ we obtain a symbol matrix $A_k  \in \mathbb{C}^{c_{out} \times c_{in}}$ and thus the convolution becomes a block diagonal operator. With that, the SVD can now be computed from each matrix $A_k$ independently as
+          i.e., a matrix vector multiplication.
+        </p>
+
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          For each frequency $k$ we obtain a symbol matrix $A_k \in \mathbb{C}^{c_{out} \times c_{in}}$ and thus the convolution becomes a block diagonal operator. With that, the SVD can now be computed from each matrix $A_k$ independently as
           $
             A_k = U_k \Sigma_k V^*_k,
           $
-          where $U_k, V_k^*$ are unitary matrices containing the singular vectors and $\Sigma_k$ is diagonal with singular values as entries. To that end the SVD by LFA can be viewed as a two-staged diagonalization 
-          1. (Block-) Diagonalization by Fourier transform 
-          2. Diagonalization of the block-diagonal matrix by SVD
+          where $U_k, V_k^*$ are unitary matrices containing the singular vectors and $\Sigma_k$ is diagonal with singular values as entries.
+        </p>
 
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          To that end the SVD by LFA can be viewed as a two-staged diagonalization
+          <br>1. (Block-) Diagonalization by Fourier transform
+          <br>2. Diagonalization of the block-diagonal matrix by SVD
+          <br><br>
           This process based on local Fourier analysis is summarized in the following algorithm.
-          </p>
-            <p>
-              $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
-              <br>$\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$,  ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
-              <br>${K = X \times Y}$
-              <br>$\mathtt{1:}$ for $k \in K$  do:                                                                      $\triangleright$ $\mathcal{O}(m\cdot n)$
-              <br>$\mathtt{2:}$        $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$                                                 $\triangleright$ $\mathcal{O}(1)$
-              <br>$\mathtt{3:}$        $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$                                                      $\triangleright$ $\mathcal{O}(c^3)$
-              <br>$\mathtt{4:}$ end for
-              <br>$\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
-            </p>
-          <p>
-          Consequently, the overall complexity to compute the SVD by LFA requires only a complexity $\mathcal{O}(n^2 c^3)$ , in the case of a square input.
-          </p>
+        </p>
+
+        <div class="min-w-0 break-words [overflow-wrap:anywhere] whitespace-pre-wrap text-sm leading-relaxed">
+        $\mathbf{Algorithm\;\operatorname{SVD\;by\;LFA} (A, m, n)}$
+        $\operatorname{Initialize}$: $X = \{0, \frac{1}{n}, \frac{2}{n}, \ldots, \frac{n-1}{n}\}$, ${Y = \{0, \frac{1}{m}, \frac{2}{m}, \ldots, \frac{m-1}{m}}\}$
+        ${K = X \times Y}$
+        $\mathtt{1:}$ for $k \in K$ do: $\triangleright$ $\mathcal{O}(m\cdot n)$
+        $\mathtt{2:}$ $A_k = \sum_{\delta \in \mathcal{N}} M_A^{(\delta)} \cdot e^{2 \pi \mathtt{i} \langle k, x \rangle}$ $\triangleright$ $\mathcal{O}(1)$
+        $\mathtt{3:}$ $U_k, \Sigma_k, V_k^* = \operatorname{SVD}(A_k)$ $\triangleright$ $\mathcal{O}(c^3)$
+        $\mathtt{4:}$ end for
+        $\mathtt{5:}$ Collect all $U_k, V_k, U_k^*$ to obtain full SVD $A = U\Sigma V^*$
+        </div>
+
+        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
+          Consequently, the overall complexity to compute the SVD by LFA requires only a complexity $\mathcal{O}(n^2 c^3)$, in the case of a square input.
         </p>
       </section>
+
       
       <!-- results -->
       
-      <section id="results" class="space-y-6 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
+      <section id="results" class="space-y-6 bg-gray-100 rounded-xl px-6 py-8 lg:max-w-6xl lg:mx-auto">
           <h2 class="text-2xl font-semibold">Qualitative Results</h2>
           <!-- ──  Captioning Quality ───────────────────────────────────── -->
           <div
@@ -301,14 +336,16 @@
                 As the input size increases, our LFA-based approach scales better than the FFT-based approach. For example at $n = 2^{14}$, which corresponds to the computation of $4$ billion singular values. With the FFT-based approach the compuation of $4$ billion singular values takes approximatively $3$ hours, with our LFA-based approach we obtain the same singular values in approximatevly $2$ hours. This corresponds to an improvement of $30.6\%$.
 
                 Figure 3(a): Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
-                ![]('figs/runtime-lfa_vs_fft-loglog-1.png')
                 Figure 3(b): Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
               </p>
           </div>
       
           <!-- Chart -->
-          <div class="flex-1 overflow-x-auto">
+          <div class="flex-1 overflow-hidden">
               <img src="./assets/images/runtime-lfa_vs_fft-xlog-1.png" alt="table1" class="chart-image w-full border rounded-md" />
+              <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 3 (a)</sub><br>
+              <img src="./assets/images/runtime-lfa_vs_fft-xlog-2.png" alt="table1" class="chart-image w-full border rounded-md" />
+              <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 3 (b)</sub>
           </div>
           </div>
       
@@ -330,8 +367,9 @@
                   </p>
               </div>
                   <!-- Chart -->
-                  <div class="flex-1 overflow-x-auto">
+                  <div class="flex-1 overflow-hidden">
                     <img src="./assets/images/boundary_cond.png" alt="table2" class="chart-image w-full border rounded-md"/>
+                    <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 4</sub>
                 </div>
               </div>
 
@@ -407,8 +445,30 @@
               </a>
             </p>
           </div>
+          
+          <!-- Bmftr -->
+          <div class="flex flex-col items-center" style="width: 100px;">
+            <a href="https://www.bundesregierung.de/breg-en/federal-government/ministries/federal-ministry-of-research-technology-and-space" target="_blank" rel="noopener noreferrer">
+              <img
+                src="./assets/images/bmftr_en.png"
+                alt="bmftr Logo"
+                loading="lazy"
+                class="w-full h-auto"
+              >
+            </a>
+            <p class="mt-2 text-sm text-gray-600 text-center">
+              <a
+                href="https://www.bundesregierung.de/breg-en/federal-government/ministries/federal-ministry-of-research-technology-and-space"
+                class="text-blue-600 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                BMFTR
+              </a>
+            </p>
+          </div>
         </div>
-        <p>This work is partially supported by the German Federal Ministry for Eco-
+        <p>* This work is partially supported by the German Federal Ministry for Eco-
           nomic Affairs and Climate Action, within the project “KI Delta Learning”
           (grant no. 19A19013Q) and partially supported by the German Federal Ministry of Research and Technology and Space.
           <br><br>∗∗ M.R. acknowledges support by the German Federal Ministry of Education
