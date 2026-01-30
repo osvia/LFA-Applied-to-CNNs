@@ -58,6 +58,9 @@
 
     <!-- SIDEBAR — visible ≥ md only -->
     <aside class="hidden md:sticky md:top-0 md:block md:w-60 md:flex-shrink-0 bg-white border-r border-gray-200 p-6 overflow-y-auto">
+      <a href="https://osvia.github.io/" target="_blank" rel="noopener noreferrer" class="block mb-6">
+        <img src="./assets/images/KeyVisual_Dark.png" alt="OSVIA Lab" class="h-12 w-auto" loading="lazy">
+      </a>
       <h2 class="text-xl font-bold mb-4">Navigation</h2>
       <nav class="space-y-2 mb-6 text-sm leading-relaxed">
         <a href="#abstract"   class="block hover:underline text-gray-700">Abstract</a>
@@ -209,7 +212,7 @@
                 class="w-full md:w-2/3 h-auto object-cover"
               />
             </figure>
-            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (a)</sub>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (a), Matrix representation of convolution on input.</sub>
           </div>
         
           <!-- Right card -->
@@ -226,7 +229,7 @@
                 class="w-full md:w-2/3 h-auto object-cover"
               />
             </figure>
-            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (b)</sub>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 1 (b), Matrix composed of $m \cdot n$ blocks  of size $c_{in} \times c_{out}$</sub>
           </div>
         </div>
         
@@ -248,10 +251,6 @@
           To formalize this, we express convolutional mappings as multiplication operators. To that end, we assume periodic boundary conditions, which corresponds to an infinite repetition of the input across space. Furthermore, the convolution acts on a local neighborhood $\mathcal{N}$, e.g., a $3 \times 3$ kernel centered around a spatial coordinate $x$, cf. Fig. 2)
         </p>
 
-        <p class="min-w-0 break-words [overflow-wrap:anywhere]">
-          Figure 2: $3 \times 3$ kernel neighborhood centered around $x$.
-        </p>
-
         <div class="grid md:grid-cols-1 gap-x-6 gap-y-8">
           <div class="space-y-3 min-w-0">
             <figure class="rounded-lg overflow-hidden flex items-center justify-center">
@@ -262,7 +261,7 @@
                 class="w-full max-w-xs h-auto object-contain"
               >
             </figure>
-            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 2</sub>
+            <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 2, $3 \times 3$ kernel neighborhood centered around $x$.</sub>
           </div>
         </div>
 
@@ -334,18 +333,17 @@
                 We begin by comparing the runtimes of the explicit computation and the Fourier-based computations in Figure 3. For the computation of the explicit SVD we observe that the runtime grows rapidly with increasing input size. The maximum tractable size we were able to decompose was an input of $64 \times 64$. The computation of the corresponding $\approx 65$ thousand singular values took around 14 hours. On the other hand, the SVDs by Fourier-based approaches scale better. At $n=64$ the computation of $\approx 65$ thousand singular values takes only $\approx 0.1$ seconds. For very small input sizes, i.e., $n=4$, the FFT-based approach is slightly faster. When increasing the input dimension, our LFA-based approach becomes dominant. For example for an input of size $512 \times 512$ our LFA-based approach is about $14.5 \%$ faster. Furthermore, we observe, that Fourier-based approaches are scalable to very large input dimensions, as illustrated in Figure 3(b). 
 
                 As the input size increases, our LFA-based approach scales better than the FFT-based approach. For example at $n = 2^{14}$, which corresponds to the computation of $4$ billion singular values. With the FFT-based approach the compuation of $4$ billion singular values takes approximatively $3$ hours, with our LFA-based approach we obtain the same singular values in approximatevly $2$ hours. This corresponds to an improvement of $30.6\%$.
-
-                Figure 3(a): Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
-                Figure 3(b): Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
               </p>
           </div>
       
           <!-- Chart -->
           <div class="flex-1 overflow-hidden">
               <img src="./assets/images/runtime-lfa_vs_fft-xlog-1.png" alt="table1" class="chart-image w-full border rounded-md" />
-              <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 3 (a)</sub><br>
+              <sub class="text-xs text-gray-500 mt-1 justify-center items-center">Figure 3(a), Runtimes to compute SVD for input sizes $n \in \{4,8,16, \ldots, 512\}$ comparing the explixit computation and FFT-based computations. The number of channels is fixed to $16$ for input and output channel dimension respectively. Both axes are log-scaled.
+              </sub><br><br>
               <img src="./assets/images/runtime-lfa_vs_fft-xlog-2.png" alt="table1" class="chart-image w-full border rounded-md" />
-              <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 3 (b)</sub>
+              <sub class="text-xs text-gray-500 mt-1 justify-center items-center">Figure 3(b), Runtimes to compute the SVD for inputs with $n \in \{2^i | i \in 8, 10, \ldots, 14\}$.  The number if channels is fixed to $16$ and the $x$-axis is log-scaled.
+              </sub>
           </div>
           </div>
       
@@ -369,7 +367,7 @@
                   <!-- Chart -->
                   <div class="flex-1 overflow-hidden">
                     <img src="./assets/images/boundary_cond.png" alt="table2" class="chart-image w-full border rounded-md"/>
-                    <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 4</sub>
+                    <sub class="text-xs text-gray-500 mt-1 justify-center flex items-center">Figure 4, Effect on Dirichlet and periodic boundary conditions on the Singular values for input sizes in $n$ </sub>
                 </div>
               </div>
 
